@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(188, 216, 245);
+        padding: 50px;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 700px;
+      }
+      h1 {
+        color: rgb(57, 146, 241);
+      }
+      p {
+        color: #555;
+      }
+      .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .team-member {
+        margin: 10px;
+        text-align: center;
+      }
+      .team-member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid orange;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .team-member img:hover {
+        transform: scale(1.1);
+      }
+      .team-member p {
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      a.back {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        background-color: orange;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      a.back:hover {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>
+        Feel free to reach out to us via email by clicking on a team member's
+        image.
+      </p>
+
+      <div class="team-container">
+        <div class="team-member">
+          <img src="static/team/supreme.jpg" alt="Suprem Shrestha" />
+          <p>Suprem Shrestha</p>
+          <p>suprem.sthao7@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <img src="static/team/siddhant.jpg" alt="Person 2" />
+
+          <p>Siddhant Shrestha</p>
+          <p>suprem.sthao7@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <img src="static/team/unik.jpg" alt="Person 3" />
+          <p>Unik Aryal</p>
+          <p>suprem.sthao7@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <img src="static/team/samundra.jpg" alt="Person 4" />
+          <p>Samundra Dawadi</p>
+          <p>suprem.sthao7@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <img src="static/team/supervisor.jpg" alt="Person 5" />
+
+          <p>Er.Shankhar Gongaju</p>
+          <p>suprem.sthao7@gmail.com</p>
+        </div>
+      </div>
+
+      <a href="/" class="back">Go back</a>
+    </div>
+  </body>
+</html>

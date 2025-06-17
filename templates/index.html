@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Prediction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f8f9fa;
+      }
+      nav {
+        background-color: orange;
+        padding: 15px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 15px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+      <h1>Upload an Image of Food</h1>
+      <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required />
+        <button type="submit">Predict Recipe</button>
+      </form>
+
+      {% if message %}
+      <p>{{ message }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

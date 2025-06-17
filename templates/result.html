@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(244, 202, 178);
+        padding: 50px;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(244, 228, 139, 0.1);
+        width: 80%;
+        max-width: 800px;
+      }
+      h1 {
+        color: #333;
+      }
+      h2 {
+        color: #555;
+      }
+      .image-container img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      .ingredients,
+      .steps {
+        text-align: justify;
+        margin: 20px 0;
+        line-height: 1.6; /* Added line spacing */
+      }
+      .ingredients ul,
+      .steps ol {
+        text-align: justify;
+        list-style-position: inside;
+        line-height: 1.6; /* Added line spacing */
+      }
+      a {
+        text-decoration: none;
+        background-color: orange;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      a:hover {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Predicted Recipe: {{ recipe }}</h1>
+
+      <div class="image-container">
+        <img src="{{ image_url }}" alt="Uploaded Food Image" />
+      </div>
+
+      <div class="ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          {% for ingredient in ingredients %}
+          <li>{{ ingredient }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="steps">
+        <h2>Steps</h2>
+        <ol>
+          {% for step in recipe_steps %}
+          <li>{{ step }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+
+      <a href="/home">Go back</a>
+    </div>
+  </body>
+</html>
